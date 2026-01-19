@@ -1,20 +1,95 @@
 <!DOCTYPE html>
-<html lang="es-MX">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>UNOFitMX</title>
-  <meta name="theme-color" content="#b00020" />
-  <meta name="description" content="UNOFitMX – Menos caos. Más ingresos." />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="UNOFitMX – Sistema operativo interno para gimnasios. Menos caos. Más ingresos." />
   <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="app.css" />
 </head>
+
 <body>
-  <main class="app">
-    <h1>UNOFitMX</h1>
-    <p>Menos caos. Más ingresos.</p>
-    <button id="installBtn" hidden>Instalar App</button>
+  <!-- ===============================
+       HEADER / NAVEGACIÓN
+  ================================ -->
+  <header>
+    <div class="logo">UNOFitMX</div>
+    <nav>
+      <button class="secondary" onclick="go('home')">Inicio</button>
+      <button class="secondary" onclick="go('dashboard')">Panel</button>
+      <button class="secondary" onclick="go('settings')">Ajustes</button>
+    </nav>
+  </header>
+
+  <!-- ===============================
+       CONTENIDO
+  ================================ -->
+  <main>
+    <!-- HOME -->
+    <section id="home" class="page active">
+      <h1>Menos caos. Más ingresos.</h1>
+      <p>Sistema operativo interno para gimnasios.</p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Control</h3>
+          <p>Acceso claro por roles y acciones.</p>
+          <button onclick="notify('Control activo')">Activar</button>
+        </div>
+        <div class="card">
+          <h3>Comunicación</h3>
+          <p>Mensajes y notificaciones internas.</p>
+          <button onclick="notify('Mensajes listos')">Abrir</button>
+        </div>
+        <div class="card">
+          <h3>Ingresos</h3>
+          <p>Menos fricción, más claridad.</p>
+          <button onclick="notify('Ingresos monitoreados')">Ver</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section id="dashboard" class="page">
+      <h1>Panel Operativo</h1>
+      <p>Estado general del sistema.</p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Estado</h3>
+          <p id="status">Sistema estable</p>
+          <button onclick="toggleStatus()">Cambiar estado</button>
+        </div>
+        <div class="card">
+          <h3>Usuarios</h3>
+          <p>Roles activos: ADM, GT, EV</p>
+          <button onclick="notify('Usuarios OK')">Revisar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SETTINGS -->
+    <section id="settings" class="page">
+      <h1>Configuración</h1>
+      <p>Ajustes locales del sistema.</p>
+
+      <div class="card">
+        <button onclick="resetApp()">Reiniciar estado</button>
+        <button id="installBtn" hidden>Instalar App</button>
+      </div>
+    </section>
   </main>
+
+  <!-- ===============================
+       FOOTER
+  ================================ -->
+  <footer>
+    © 2026 UNOFitMX — Sistema interno<br>
+    Creado por Hugo González Napoles, Director General de UNOFit
+  </footer>
+
   <script src="app.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
