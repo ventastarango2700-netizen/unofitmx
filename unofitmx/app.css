@@ -1,0 +1,21 @@
+:root{
+  --rojo:#b00020;
+  --gris:#f5f5f5;
+  --blanco:#ffffff;
+  --texto:#111827;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
+body{
+  background:var(--gris);
+  color:var(--texto);
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.app{
+  background:var(--blanco);
+  padding:3rem;
+  border-radius:16px;
+  text-align:center;
+}

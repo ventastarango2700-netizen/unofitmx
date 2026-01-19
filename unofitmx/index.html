@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UNOFitMX</title>
+  <meta name="theme-color" content="#b00020" />
+  <meta name="description" content="UNOFitMX – Menos caos. Más ingresos." />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>UNOFitMX</h1>
+    <p>Menos caos. Más ingresos.</p>
+    <button id="installBtn" hidden>Instalar App</button>
+  </main>
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>
