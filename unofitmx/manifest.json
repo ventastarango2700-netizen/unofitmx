@@ -1,9 +1,10 @@
 {
   "name": "UNOFitMX",
   "short_name": "UNOFitMX",
+  "description": "Sistema operativo interno para gimnasios. Menos caos. Más ingresos.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#b00020",
+  "theme_color": "#000000",
   "icons": []
 }
