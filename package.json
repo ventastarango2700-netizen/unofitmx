@@ -1,0 +1,9 @@
+{
+  "name": "unofitmx",
+  "version": "1.0.0",
+  "description": "UNOFitMX - Sistema operativo interno para gimnasios",
+  "type": "module",
+  "dependencies": {
+    "@netlify/neon": "^0.1.0"
+  }
+}
